@@ -1,0 +1,28 @@
+<idea-plugin>
+    <id>io.intheloup.flutter-bloc-generator</id>
+    <name>Flutter Bloc Generator</name>
+    <vendor email="hello@intheloup.io" url="https://intheloup.io">Loup</vendor>
+
+    <description><![CDATA[
+    Flutter bloc templates generator.<br>
+    Generates screen, state, actions and bloc classes.
+    ]]></description>
+
+    <depends>Dart</depends>
+    <depends>io.flutter</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+    </extensions>
+
+    <actions>
+        <action id="FlutterBloc.New"
+                class="io.intheloup.flutterblocgenerator.action.NewAction"
+                text="Flutter Bloc"
+                description="Generate new flutter bloc"
+                icon="/icons/dart_file.svg">
+            <add-to-group group-id="NewGroup" anchor="after" relative-to-action="Dart.NewDartFile"/>
+        </action>
+
+    </actions>
+</idea-plugin>

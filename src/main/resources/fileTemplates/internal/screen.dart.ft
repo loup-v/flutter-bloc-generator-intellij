@@ -1,0 +1,41 @@
+import 'package:${PROJECT_NAME}/presentation/presentation.dart';
+import 'package:flutter/widgets.dart';
+
+import '${NAME}_actions.dart';
+import '${NAME}_bloc.dart';
+import '${NAME}_state.dart';
+
+class ${CLASS_NAME}Screen extends StatefulWidget {
+  @override
+  _${CLASS_NAME}ScreenState createState() => _${CLASS_NAME}ScreenState();
+}
+
+class _${CLASS_NAME}ScreenState extends State<${CLASS_NAME}Screen> {
+  ${CLASS_NAME}Bloc _bloc;
+
+  @override
+  void initState() {
+    super.initState();
+    _bloc = ${CLASS_NAME}Bloc();
+  }
+
+  @override
+  void dispose() {
+    _bloc.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return BlocStreamBuilder<${CLASS_NAME}State>(
+      controller: _bloc.controller,
+      builder: (context, state) {
+        return _buildUI(state);
+      },
+    );
+  }
+
+  Widget _buildUI(AlertsState state) {
+    return Container();
+  }
+}

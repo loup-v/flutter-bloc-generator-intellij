@@ -1,0 +1,36 @@
+import 'package:${PROJECT_NAME}/presentation/presentation.dart';
+
+import '${NAME}_actions.dart';
+import '${NAME}_state.dart';
+
+class ${CLASS_NAME}Bloc {
+  BlocController<${CLASS_NAME}State, Action> get controller => _core;
+  BlocCore<${CLASS_NAME}State, ${CLASS_NAME}StateBuilder, Action> _core;
+
+  ${CLASS_NAME}Bloc() {
+    _core = BlocCore<${CLASS_NAME}State, ${CLASS_NAME}StateBuilder, Action>(
+      stateBuilderInitializer: _initializeStateBuilder,
+      stateInitializer: _initializeState,
+      dispatcher: _dispatch,
+    );
+  }
+
+  void dispose() {
+    _core.dispose();
+  }
+
+  ${CLASS_NAME}StateBuilder _initializeStateBuilder() {
+    return ${CLASS_NAME}StateBuilder();
+  }
+
+  ${CLASS_NAME}State _initializeState(${CLASS_NAME}StateBuilder builder) {
+    return builder.build();
+  }
+
+  void _dispatch(Action action) {
+    switch (action.runtimeType) {
+      default:
+        assert(false);
+    }
+  }
+}

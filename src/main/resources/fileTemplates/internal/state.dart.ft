@@ -1,0 +1,11 @@
+library ${NAME}_state;
+
+import 'package:${PROJECT_NAME}/presentation/presentation.dart';
+
+part '${NAME}_state.g.dart';
+
+abstract class ${CLASS_NAME}State implements Built<${CLASS_NAME}State, ${CLASS_NAME}StateBuilder> {
+
+  ${CLASS_NAME}State._();
+  factory ${CLASS_NAME}State([updates(${CLASS_NAME}StateBuilder b)]) = _$${CLASS_NAME}State;
+}
