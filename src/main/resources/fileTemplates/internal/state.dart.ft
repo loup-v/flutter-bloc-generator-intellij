@@ -1,6 +1,6 @@
 library ${NAME}_state;
 
-import 'package:${PROJECT_NAME}/presentation/presentation.dart';
+import 'package:built_value/built_value.dart';
 
 part '${NAME}_state.g.dart';
 

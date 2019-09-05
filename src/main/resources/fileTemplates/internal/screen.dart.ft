@@ -35,7 +35,7 @@ class _${CLASS_NAME}ScreenState extends State<${CLASS_NAME}Screen> {
     );
   }
 
-  Widget _buildUI(AlertsState state) {
+  Widget _buildUI(${CLASS_NAME}State state) {
     return Container();
   }
 }

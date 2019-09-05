@@ -24,7 +24,7 @@ object TemplateBuilder {
 
     mapTemplates(bloc).forEach { template ->
       val fileTemplate = manager.getInternalTemplate(template.key.name.toLowerCase())
-      FileTemplateUtil.createFromTemplate(fileTemplate, "${template.value}.dart", properties, destinationDirectory)
+      FileTemplateUtil.createFromTemplate(fileTemplate, template.value, properties, destinationDirectory)
     }
   }
 
